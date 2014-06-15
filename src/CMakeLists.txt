@@ -24,3 +24,10 @@ add_executable (KipTutExe main.cpp)
 target_link_libraries (KipTutExe ${EXTRA_LIBS})
 add_executable (KipTest test.cpp)
 target_link_libraries (KipTest ${EXTRA_LIBS})
+
+# add tests
+add_executable (KipTestCapitalize testKipCapitalize.cpp)
+target_link_libraries (KipTestCapitalize ${EXTRA_LIBS})
+# run some tests
+enable_testing()
+add_test(KipTestRuns KipTest)
