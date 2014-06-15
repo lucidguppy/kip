@@ -12,11 +12,22 @@
 using namespace std;
 
 
-int main(int argc, char** argv) {
+int main(int argc, char** argv)
+{
   std::string lower {"lower"};
+  bool retval = false;
   cout << kip::string::capitalize(lower) << endl;
   // if the strings are equal return zero
-  return (!(std::string("Lower") == kip::string::capitalize(lower)));
+  if (!(std::string("Lower") == kip::string::capitalize(lower)))
+    {
+      retval = true;
+    }
+  // make sure capitalize of nothing is nothing
+  if ( std::string("") != kip::string::capitalize(""))
+    {
+      retval = true;
+    }
+  return retval;
 }
 
 

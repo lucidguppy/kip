@@ -9,7 +9,9 @@ namespace kip {
 
     //regular functions
     std::string capitalize (std::string word) {
-      word[0] = std::toupper(word[0]);
+      if (word.length() > 0) {
+	  word[0] = std::toupper(word[0]);
+      }
       return word;
     }
 
