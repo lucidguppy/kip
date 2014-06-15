@@ -22,3 +22,5 @@ endif (USE_KIPLIB)
 # add the executable
 add_executable (KipTutExe main.cpp)
 target_link_libraries (KipTutExe ${EXTRA_LIBS})
+add_executable (KipTest test.cpp)
+target_link_libraries (KipTest ${EXTRA_LIBS})
